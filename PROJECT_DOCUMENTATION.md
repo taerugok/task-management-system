@@ -72,7 +72,7 @@ Finally, the notification system was added — when a new task is created, an en
 ## Each Page — What It Does and How It Works
 
 ### Login Page
-
+<img width="1918" height="940" alt="image" src="https://github.com/user-attachments/assets/1e2e3af1-bf08-414f-90b5-f651a92332c8" />
 This is the first screen. It has a black background with animated vertical bars that slowly rise and fall in a maroon colour. On top of this is a glass-effect login card with blurred background (glassmorphism). The title "Task Management System" has a deep red glow that brightens when you hover over it. You enter a username and password, click Login, and you are taken to the Dashboard. The page files are `LoginPage.js` and `LoginPage.css`.
 
 ### Dashboard
