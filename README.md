@@ -21,17 +21,55 @@ Any task can be assigned to one or more people. This means two or three team mem
 ## Project Structure
 
 task-management-system/
-  frontend/         React application (port 3000)
-    src/
-      Components/   All page components and their CSS files
-      services/     API call layer (api.js)
-  backend/          Node.js / Express API (port 5000)
-    config/         Database setup (db.js)
-    controllers/    Request handlers for each resource
-    models/         Database query functions
-    routes/         API route definitions
-    seed.js         Sample data loader
-    server.js       Entry point
+├── demo.mp4                          ← Demo video
+├── README.md                         ← Project overview & setup
+├── API_DOCUMENTATION.md              ← All API endpoints
+├── API_DOCS.md                       ← API quick reference
+├── PROJECT_DOCUMENTATION.md          ← Full project explanation
+├── .gitignore
+│
+├── backend/                          ← Node.js + Express + SQLite
+│   ├── server.js                     ← Entry point (port 5000)
+│   ├── seed.js                       ← Sample data loader
+│   ├── package.json
+│   ├── config/
+│   │   └── db.js                     ← SQLite database connection
+│   ├── controllers/
+│   │   ├── authController.js         ← Login / register logic
+│   │   ├── taskController.js         ← Task CRUD logic
+│   │   └── bugController.js          ← Bug CRUD logic
+│   ├── middleware/
+│   │   └── authMiddleware.js         ← JWT verification
+│   ├── models/
+│   │   ├── userModel.js              ← User DB queries
+│   │   ├── taskModel.js              ← Task DB queries
+│   │   └── bugModel.js               ← Bug DB queries
+│   ├── routes/
+│   │   ├── authRoutes.js             ← /api/auth/*
+│   │   ├── taskRoutes.js             ← /api/tasks/*
+│   │   ├── bugRoutes.js              ← /api/bugs/*
+│   │   └── userRoutes.js             ← /api/users/*
+│   └── services/                     ← Business logic layer
+│
+└── frontend/                         ← React 18 (port 3000)
+    ├── package.json
+    ├── public/
+    │   └── index.html
+    └── src/
+        ├── App.js                    ← Routes & protected pages
+        ├── index.js                  ← React entry point
+        ├── services/
+        │   └── api.js                ← All API calls (axios)
+        └── Components/
+            ├── LoginPage.js/css      ← Login screen
+            ├── Layout.js/css         ← Sidebar + topbar shell
+            ├── Dashboard.js/css      ← Overview & stats
+            ├── TaskManager.js/css    ← Task list & filters
+            ├── TaskForm.js/css       ← Create / edit task form
+            ├── Employees.js/css      ← Team workload grid
+            ├── Bugs.js/css           ← Bug tracker grid
+            └── Reports.js/css        ← KPI & performance
+
 
 
 ## Pages
