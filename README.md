@@ -19,7 +19,7 @@ In a corporate IT team, dozens of tasks run in parallel across multiple people. 
 Any task can be assigned to one or more people. This means two or three team members can be listed as working on the same task together. Each person's workload is visible on the Employees page and in Reports, so managers can balance work fairly.
 
 ## Project Structure
-
+```
 task-management-system/
 ├── demo.mp4                          ← Demo video
 ├── README.md                         ← Project overview & setup
@@ -70,7 +70,7 @@ task-management-system/
             ├── Bugs.js/css           ← Bug tracker grid
             └── Reports.js/css        ← KPI & performance
 
-
+```
 
 ## Pages
 
