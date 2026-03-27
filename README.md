@@ -1,9 +1,7 @@
 ## Task Management System
-```
 <video width="100%" controls>
   <source src="demo.mp4" type="video/mp4">
 </video>
-```
 A full-stack web application built for corporate IT teams to manage tasks, track bugs, monitor team performance, and collaborate efficiently.
 
 ## What is a Task Management System?
