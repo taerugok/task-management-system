@@ -29,7 +29,11 @@ Multiple assignees are stored in a separate join table in the database. When a t
 
 
 ---
+## System Architecture
 
+<img width="585" height="685" alt="image" src="https://github.com/user-attachments/assets/d9f036fd-cd16-4b8d-907c-ad41d62e9f45" />
+
+---
 
 ## Structure of the System
 
