@@ -1,7 +1,9 @@
 ## Task Management System
+
 <video width="100%" controls>
   <source src="demo.mp4" type="video/mp4">
 </video>
+
 A full-stack web application built for corporate IT teams to manage tasks, track bugs, monitor team performance, and collaborate efficiently.
 
 ## What is a Task Management System?
@@ -16,13 +18,17 @@ In a corporate IT team, dozens of tasks run in parallel across multiple people. 
 
 Any task can be assigned to one or more people. This means two or three team members can be listed as working on the same task together. Each person's workload is visible on the Employees page and in Reports, so managers can balance work fairly.
 
+## System Architecture
+
+![System Architecture](docs/architecture.png)
+
 ## Project Structure
+
 ```
 task-management-system/
 ├── demo.mp4                          ← Demo video
-├── README.md                         ← Project overview & setup
+├── README.md                         ← Setup & architecture
 ├── API_DOCUMENTATION.md              ← All API endpoints
-├── API_DOCS.md                       ← API quick reference
 ├── PROJECT_DOCUMENTATION.md          ← Full project explanation
 ├── .gitignore
 │
@@ -31,7 +37,7 @@ task-management-system/
 │   ├── seed.js                       ← Sample data loader
 │   ├── package.json
 │   ├── config/
-│   │   └── db.js                     ← SQLite database connection
+│   │   └── db.js                     ← SQLite connection & schema
 │   ├── controllers/
 │   │   ├── authController.js         ← Login / register logic
 │   │   ├── taskController.js         ← Task CRUD logic
@@ -57,17 +63,16 @@ task-management-system/
         ├── App.js                    ← Routes & protected pages
         ├── index.js                  ← React entry point
         ├── services/
-        │   └── api.js                ← All API calls (axios)
+        │   └── api.js                ← All API calls
         └── Components/
             ├── LoginPage.js/css      ← Login screen
             ├── Layout.js/css         ← Sidebar + topbar shell
             ├── Dashboard.js/css      ← Overview & stats
             ├── TaskManager.js/css    ← Task list & filters
-            ├── TaskForm.js/css       ← Create / edit task form
+            ├── TaskForm.js/css       ← Create / edit task
             ├── Employees.js/css      ← Team workload grid
             ├── Bugs.js/css           ← Bug tracker grid
             └── Reports.js/css        ← KPI & performance
-
 ```
 
 ## Pages
@@ -110,24 +115,30 @@ You need Node.js 16 or higher.
 
 ## Backend
 
+```bash
 cd backend
 npm install
 node server.js
+```
 
 Runs on http://localhost:5000
 
 ## Frontend
 
-cd task-management-system/frontend
+```bash
+cd frontend
 npm install
 npm start
+```
 
 Runs on http://localhost:3000
 
 ## Optional: Load sample data
 
+```bash
 cd backend
 node seed.js
+```
 
 ## Login Credentials
 
@@ -149,7 +160,6 @@ node seed.js
 - Auth: JWT tokens (jsonwebtoken)
 
 
-
 ## Key Features
 
 - JWT-based authentication with 24-hour tokens
@@ -161,14 +171,12 @@ node seed.js
 - Animated maroon bar background throughout
 - Glassmorphism cards and sidebar
 - Collapsible sidebar (230px to 64px)
-- Admin info popup with session details
-- Bug Tracker with Open / In Progress / Resolved workflow — 3-column grid view
+- Bug Tracker with Open / In Progress / Resolved workflow
 - Employees page — 3-column grid view with per-person task stats
 - Dashboard charts with SVG ring and progress bars
 - Reports with team performance table
 - Mobile-responsive layout
 - Corporate sample data included (20 tasks, 11 bug reports)
-
 
 
 ## Non-Functional Requirements
@@ -179,7 +187,3 @@ node seed.js
 - Soft delete keeps data integrity intact
 - Error handling on all API endpoints with meaningful messages
 - Environment variable support via dotenv
-
-
-
-

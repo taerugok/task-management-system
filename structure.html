@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body {
+    background: #0d0d0d;
+    font-family: 'Courier New', monospace;
+    padding: 40px 50px;
+    margin: 0;
+    display: inline-block;
+    min-width: 600px;
+  }
+  h2 {
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8b0000;
+  }
+  .tree { font-size: 0.88rem; line-height: 2; }
+  .folder { color: #f59e0b; font-weight: 700; }
+  .file   { color: #e0e0e0; }
+  .note   { color: #6b7280; font-size: 0.78rem; margin-left: 4px; }
+  .branch { color: #444; }
+</style>
+</head>
+<body>
+<h2>Project Structure — Task Management System</h2>
+<div class="tree"><pre style="margin:0;color:#e0e0e0;">
+<span class="folder">task-management-system/</span>
+<span class="branch">├──</span> <span class="file">demo.mp4</span>                   <span class="note">← Demo video</span>
+<span class="branch">├──</span> <span class="file">README.md</span>                  <span class="note">← Setup & architecture</span>
+<span class="branch">├──</span> <span class="file">API_DOCUMENTATION.md</span>       <span class="note">← All API endpoints</span>
+<span class="branch">├──</span> <span class="file">PROJECT_DOCUMENTATION.md</span>   <span class="note">← Full project explanation</span>
+<span class="branch">├──</span> <span class="file">.gitignore</span>
+<span class="branch">│</span>
+<span class="branch">├──</span> <span class="folder">backend/</span>                   <span class="note">← Node.js + Express + SQLite</span>
+<span class="branch">│   ├──</span> <span class="file">server.js</span>              <span class="note">← Entry point  (port 5000)</span>
+<span class="branch">│   ├──</span> <span class="file">seed.js</span>                <span class="note">← Sample data loader</span>
+<span class="branch">│   ├──</span> <span class="file">package.json</span>
+<span class="branch">│   ├──</span> <span class="folder">config/</span>
+<span class="branch">│   │   └──</span> <span class="file">db.js</span>              <span class="note">← SQLite connection & schema</span>
+<span class="branch">│   ├──</span> <span class="folder">controllers/</span>
+<span class="branch">│   │   ├──</span> <span class="file">authController.js</span>  <span class="note">← Login / register logic</span>
+<span class="branch">│   │   ├──</span> <span class="file">taskController.js</span>  <span class="note">← Task CRUD logic</span>
+<span class="branch">│   │   └──</span> <span class="file">bugController.js</span>   <span class="note">← Bug CRUD logic</span>
+<span class="branch">│   ├──</span> <span class="folder">middleware/</span>
+<span class="branch">│   │   └──</span> <span class="file">authMiddleware.js</span>  <span class="note">← JWT verification</span>
+<span class="branch">│   ├──</span> <span class="folder">models/</span>
+<span class="branch">│   │   ├──</span> <span class="file">userModel.js</span>       <span class="note">← User DB queries</span>
+<span class="branch">│   │   ├──</span> <span class="file">taskModel.js</span>       <span class="note">← Task DB queries</span>
+<span class="branch">│   │   └──</span> <span class="file">bugModel.js</span>        <span class="note">← Bug DB queries</span>
+<span class="branch">│   ├──</span> <span class="folder">routes/</span>
+<span class="branch">│   │   ├──</span> <span class="file">authRoutes.js</span>      <span class="note">← /api/auth/*</span>
+<span class="branch">│   │   ├──</span> <span class="file">taskRoutes.js</span>      <span class="note">← /api/tasks/*</span>
+<span class="branch">│   │   ├──</span> <span class="file">bugRoutes.js</span>       <span class="note">← /api/bugs/*</span>
+<span class="branch">│   │   └──</span> <span class="file">userRoutes.js</span>      <span class="note">← /api/users/*</span>
+<span class="branch">│   └──</span> <span class="folder">services/</span>              <span class="note">← Business logic layer</span>
+<span class="branch">│</span>
+<span class="branch">└──</span> <span class="folder">frontend/</span>                  <span class="note">← React 18  (port 3000)</span>
+    <span class="branch">├──</span> <span class="file">package.json</span>
+    <span class="branch">├──</span> <span class="folder">public/</span>
+    <span class="branch">│   └──</span> <span class="file">index.html</span>
+    <span class="branch">└──</span> <span class="folder">src/</span>
+        <span class="branch">├──</span> <span class="file">App.js</span>                 <span class="note">← Routes & protected pages</span>
+        <span class="branch">├──</span> <span class="file">index.js</span>               <span class="note">← React entry point</span>
+        <span class="branch">├──</span> <span class="folder">services/</span>
+        <span class="branch">│   └──</span> <span class="file">api.js</span>             <span class="note">← All API calls</span>
+        <span class="branch">└──</span> <span class="folder">Components/</span>
+            <span class="branch">├──</span> <span class="file">LoginPage.js/css</span>   <span class="note">← Login screen</span>
+            <span class="branch">├──</span> <span class="file">Layout.js/css</span>      <span class="note">← Sidebar + topbar shell</span>
+            <span class="branch">├──</span> <span class="file">Dashboard.js/css</span>   <span class="note">← Overview & stats</span>
+            <span class="branch">├──</span> <span class="file">TaskManager.js/css</span> <span class="note">← Task list & filters</span>
+            <span class="branch">├──</span> <span class="file">TaskForm.js/css</span>    <span class="note">← Create / edit task</span>
+            <span class="branch">├──</span> <span class="file">Employees.js/css</span>   <span class="note">← Team workload grid</span>
+            <span class="branch">├──</span> <span class="file">Bugs.js/css</span>        <span class="note">← Bug tracker grid</span>
+            <span class="branch">└──</span> <span class="file">Reports.js/css</span>     <span class="note">← KPI & performance</span>
+</pre></div>
+</body>
+</html>
