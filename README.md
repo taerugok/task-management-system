@@ -20,7 +20,8 @@ Any task can be assigned to one or more people. This means two or three team mem
 
 ## System Architecture
 
-![System Architecture](docs/architecture.png)
+<img width="585" height="685" alt="image" src="https://github.com/user-attachments/assets/d9f036fd-cd16-4b8d-907c-ad41d62e9f45" />
+
 
 ## Project Structure
 
